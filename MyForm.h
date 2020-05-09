@@ -70,10 +70,10 @@ namespace Zadanie5 {
 	private: System::Windows::Forms::NumericUpDown^ wybor;
 
 	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::DataGridView^ tabela;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
+
+
+
+
 	private: System::Windows::Forms::CheckBox^ dodaj_dane;
 	private: System::Windows::Forms::Label^ Py;
 	private: System::Windows::Forms::TextBox^ x1;
@@ -101,6 +101,13 @@ namespace Zadanie5 {
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
 	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::CheckBox^ logx;
+	private: System::Windows::Forms::CheckBox^ logy;
+	private: System::Windows::Forms::Button^ czysc;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
+	private: System::Windows::Forms::DataGridView^ tabela;
 
 
 
@@ -148,10 +155,6 @@ namespace Zadanie5 {
 			this->Px = (gcnew System::Windows::Forms::Label());
 			this->wybor = (gcnew System::Windows::Forms::NumericUpDown());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->tabela = (gcnew System::Windows::Forms::DataGridView());
-			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->dodaj_dane = (gcnew System::Windows::Forms::CheckBox());
 			this->Py = (gcnew System::Windows::Forms::Label());
 			this->x1 = (gcnew System::Windows::Forms::TextBox());
@@ -168,6 +171,13 @@ namespace Zadanie5 {
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->logx = (gcnew System::Windows::Forms::CheckBox());
+			this->logy = (gcnew System::Windows::Forms::CheckBox());
+			this->czysc = (gcnew System::Windows::Forms::Button());
+			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->tabela = (gcnew System::Windows::Forms::DataGridView());
 			this->menuStrip1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->wybor))->BeginInit();
@@ -196,14 +206,14 @@ namespace Zadanie5 {
 			// otwórzWykresToolStripMenuItem
 			// 
 			this->otwórzWykresToolStripMenuItem->Name = L"otwórzWykresToolStripMenuItem";
-			this->otwórzWykresToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->otwórzWykresToolStripMenuItem->Size = System::Drawing::Size(151, 22);
 			this->otwórzWykresToolStripMenuItem->Text = L"Otwórz wykres";
 			this->otwórzWykresToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::otwórzWykresToolStripMenuItem_Click);
 			// 
 			// zapiszTabelêToolStripMenuItem
 			// 
 			this->zapiszTabelêToolStripMenuItem->Name = L"zapiszTabelêToolStripMenuItem";
-			this->zapiszTabelêToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->zapiszTabelêToolStripMenuItem->Size = System::Drawing::Size(151, 22);
 			this->zapiszTabelêToolStripMenuItem->Text = L"Zapisz tabelê";
 			this->zapiszTabelêToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::zapiszTabelêToolStripMenuItem_Click);
 			// 
@@ -267,11 +277,11 @@ namespace Zadanie5 {
 			// srodek
 			// 
 			this->srodek->AutoSize = true;
-			this->srodek->Location = System::Drawing::Point(620, 113);
+			this->srodek->Location = System::Drawing::Point(609, 113);
 			this->srodek->Name = L"srodek";
-			this->srodek->Size = System::Drawing::Size(81, 13);
+			this->srodek->Size = System::Drawing::Size(92, 13);
 			this->srodek->TabIndex = 19;
-			this->srodek->Text = L"Œrodek uk³adu:";
+			this->srodek->Text = L"Pocz¹tek uk³adu:";
 			// 
 			// Px
 			// 
@@ -301,38 +311,6 @@ namespace Zadanie5 {
 			this->label1->Size = System::Drawing::Size(75, 13);
 			this->label1->TabIndex = 24;
 			this->label1->Text = L"Wybierz punkt";
-			// 
-			// tabela
-			// 
-			this->tabela->BackgroundColor = System::Drawing::SystemColors::ButtonFace;
-			this->tabela->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->tabela->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3) {
-				this->Column1, this->Column2,
-					this->Column3
-			});
-			this->tabela->GridColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->tabela->Location = System::Drawing::Point(635, 277);
-			this->tabela->Name = L"tabela";
-			this->tabela->Size = System::Drawing::Size(269, 350);
-			this->tabela->TabIndex = 25;
-			// 
-			// Column1
-			// 
-			this->Column1->HeaderText = L"Nr";
-			this->Column1->Name = L"Column1";
-			this->Column1->Width = 75;
-			// 
-			// Column2
-			// 
-			this->Column2->HeaderText = L"x";
-			this->Column2->Name = L"Column2";
-			this->Column2->Width = 75;
-			// 
-			// Column3
-			// 
-			this->Column3->HeaderText = L"y";
-			this->Column3->Name = L"Column3";
-			this->Column3->Width = 75;
 			// 
 			// dodaj_dane
 			// 
@@ -477,11 +455,76 @@ namespace Zadanie5 {
 			this->label4->TabIndex = 40;
 			this->label4->Text = L"x[px]";
 			// 
+			// logx
+			// 
+			this->logx->AutoSize = true;
+			this->logx->Location = System::Drawing::Point(661, 201);
+			this->logx->Name = L"logx";
+			this->logx->Size = System::Drawing::Size(124, 17);
+			this->logx->TabIndex = 42;
+			this->logx->Text = L"Logarytmiczna os 0X";
+			this->logx->UseVisualStyleBackColor = true;
+			// 
+			// logy
+			// 
+			this->logy->AutoSize = true;
+			this->logy->Location = System::Drawing::Point(807, 201);
+			this->logy->Name = L"logy";
+			this->logy->Size = System::Drawing::Size(124, 17);
+			this->logy->TabIndex = 43;
+			this->logy->Text = L"Logarytmiczna os 0Y";
+			this->logy->UseVisualStyleBackColor = true;
+			// 
+			// czysc
+			// 
+			this->czysc->Location = System::Drawing::Point(739, 603);
+			this->czysc->Name = L"czysc";
+			this->czysc->Size = System::Drawing::Size(75, 23);
+			this->czysc->TabIndex = 44;
+			this->czysc->Text = L"Czyœæ tabelê";
+			this->czysc->UseVisualStyleBackColor = true;
+			this->czysc->Click += gcnew System::EventHandler(this, &MyForm::czysc_Click);
+			// 
+			// Column3
+			// 
+			this->Column3->HeaderText = L"y";
+			this->Column3->Name = L"Column3";
+			this->Column3->Width = 75;
+			// 
+			// Column2
+			// 
+			this->Column2->HeaderText = L"x";
+			this->Column2->Name = L"Column2";
+			this->Column2->Width = 75;
+			// 
+			// Column1
+			// 
+			this->Column1->HeaderText = L"Nr";
+			this->Column1->Name = L"Column1";
+			this->Column1->Width = 75;
+			// 
+			// tabela
+			// 
+			this->tabela->BackgroundColor = System::Drawing::SystemColors::ButtonFace;
+			this->tabela->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->tabela->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3) {
+				this->Column1, this->Column2,
+					this->Column3
+			});
+			this->tabela->GridColor = System::Drawing::SystemColors::ActiveCaptionText;
+			this->tabela->Location = System::Drawing::Point(635, 277);
+			this->tabela->Name = L"tabela";
+			this->tabela->Size = System::Drawing::Size(269, 320);
+			this->tabela->TabIndex = 25;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(931, 655);
+			this->Controls->Add(this->czysc);
+			this->Controls->Add(this->logy);
+			this->Controls->Add(this->logx);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label2);
@@ -570,19 +613,38 @@ private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArg
 		double nx, ny;
 		double x, y;
 		int nr;
+		double a, b;
 		try
 		{
-			rx_px = abs(Convert::ToInt32(x2px->Text) - Convert::ToInt32(x1px->Text));
-			ry_px = abs(Convert::ToInt32(y2px->Text) - Convert::ToInt32(y1px->Text));
-			rx = abs(Convert::ToDouble(x2->Text) - Convert::ToDouble(x1->Text));
-			ry = abs(Convert::ToDouble(y2->Text) - Convert::ToDouble(y1->Text));
-			nx = rx / rx_px;
-			ny = ry / ry_px;
 
+			if (logx->Checked==true)
+			{
+				a = (log10(Convert::ToDouble(x1->Text)) - log10(Convert::ToDouble(x0->Text))) / (Convert::ToInt32(x1px->Text) - Convert::ToInt32(x0px->Text));
+				b = log10(Convert::ToDouble(x1->Text)) - a * Convert::ToInt32(x1px->Text);
+				x = pow(10 , (a * Convert::ToInt32(livex->Text) + b));
+			}
+			else
+			{
+				rx_px = abs(Convert::ToInt32(x2px->Text) - Convert::ToInt32(x1px->Text));
+				rx = abs(Convert::ToDouble(x2->Text) - Convert::ToDouble(x1->Text));
+				nx = rx / rx_px;
+				x = (Convert::ToInt32(livex->Text) - Convert::ToInt32(x0px->Text)) * nx + Convert::ToDouble(x0->Text);
+			}
+			
+			if (logy->Checked==true)
+			{
+				a = (log10(Convert::ToDouble(y2->Text)) - log10(Convert::ToDouble(y0->Text))) / (Convert::ToInt32(y2px->Text) - Convert::ToInt32(y0px->Text));
+				b = log10(Convert::ToDouble(y2->Text)) - a * Convert::ToInt32(y2px->Text);
+				y = pow(10, (a * Convert::ToInt32(livey->Text) + b));
+			}
+			else
+			{
+				ry_px = abs(Convert::ToInt32(y2px->Text) - Convert::ToInt32(y1px->Text));
+				ry = abs(Convert::ToDouble(y2->Text) - Convert::ToDouble(y1->Text));
+				ny = ry / ry_px;
+				y = Convert::ToDouble(y0->Text) - (Convert::ToInt32(livey->Text) - Convert::ToInt32(y0px->Text)) * ny;
+			}
 			nr = tabela->Rows->Count;
-			x = (Convert::ToInt32(livex->Text) - Convert::ToInt32(x0px->Text)) * nx - Convert::ToDouble(x0->Text);
-			y = Convert::ToDouble(y0->Text)-(Convert::ToInt32(livey->Text)- Convert::ToInt32(y0px->Text)) * ny;
-
 			tabela->Rows->Add(nr.ToString(),x.ToString(),y.ToString());
 		}
 		catch (Exception^)
@@ -667,6 +729,9 @@ private: System::Void zapiszTabelêToolStripMenuItem_Click(System::Object^ sender
 		writer->Close();
 		MessageBox::Show("Tabela zosta³a zapisana: " + plik->FileName);
 	}
+}
+private: System::Void czysc_Click(System::Object^ sender, System::EventArgs^ e) {
+	tabela->Rows->Clear();
 }
 };
 }
